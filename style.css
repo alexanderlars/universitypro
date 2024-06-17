@@ -3,10 +3,45 @@
     padding: 0;
 }
 
-.header{
+
+.header {
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url("images/cool2.png");
+    background-image: linear-gradient(rgba(4,9,30,0.1),rgba(4,9,30,0.1)), url("images/cool2.png");
+    background-position: center;
+    background-size: cover;
+    position: relative;
 }
 
+.fa-building-columns {
+    color: white;
+    padding: 10px;
+}
+
+.title {
+    font-family: 'Courier New', Courier, monospace; /* Du kan byta till en annan font här */
+    font-size: 30px; /* Justera storleken här */
+    color: white; /* Justera färgen här om det behövs */
+    vertical-align: middle; /* För att centrera texten vertikalt med ikonen */
+    margin-left: 10px; /* Avstånd mellan ikon och text */
+}
+
+.nav-links a {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+nav a {
+    display: flex;
+    align-items: center; /* För att centrera ikon och text vertikalt */
+}
+
+
+a {
+    text-decoration: none; /* Ta bort understrykningen från alla länkar */
+    color: inherit; /* Behåll färgen som den är */
+}
+a:visited {
+    text-decoration: none; /* Ta bort understrykningen från besökta länkar */
+    color: inherit; /* Behåll färgen som den är */
+}
 
