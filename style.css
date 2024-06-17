@@ -3,6 +3,93 @@
     padding: 0;
 }
 
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.3),rgba(4,9,30,0.3)), url("images/cool2.png");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.fa-building-columns {
+    color: white;
+    padding: 10px;
+}
+
+.title {
+    font-family: "poppins", Courier, monospace;
+    font-weight: 400;
+    font-size: 30px;
+    color: white;
+    margin: 0%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 150px;
+}
+.nav-links{
+    flex:1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: "poppins";
+}
+
+.nav-links ul li::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+nav {
+display: flex;
+padding: 2% 6%;
+align-items: center; /* Centrera vertikalt */
+}
+
+nav a {
+display: flex; /* Lägg till denna rad */
+align-items: center; /* Lägg till denna rad */
+margin-left: 0; /* Ingen marginal till vänster */
+}
+
+.fa-building-columns {
+color: white;
+padding: 0 10px 0 0; /* Justera padding för att separera ikonen från titeln */
+}
+
 
 .nav-links a {
     font-family: 'Courier New', Courier, monospace;
@@ -16,4 +103,37 @@ nav a {
 a:visited {
     text-decoration: none;
     color: inherit;
+}
+
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.text-box h1{
+    font-size: 55px;
+    font-family: "poppins";
+}
+
+.text-box p{
+    color: #fff;
+    margin: 10px;
+}
+
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 16px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+
 }
