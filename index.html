@@ -6,54 +6,106 @@
     <link rel="stylesheet" href="styles.css">
     <title>Larsnäs University Homepage</title>
     <script src="https://kit.fontawesome.com/25a70e840f.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <style>
         .header {
-    min-height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.1),rgba(4,9,30,0.1)), url("images/cool2.png");
-    background-position: center;
-    background-size: cover;
-    position: relative;
+            min-height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(4,9,30,0.1),rgba(4,9,30,0.1)), url("images/cool2.png");
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .fa-building-columns {
+            color: white;
+            padding: 10px;
+        }
+
+        .title {
+            font-family: "poppins", Courier, monospace;
+            font-weight: 400;
+            font-size: 30px;
+            color: white;
+            margin: 0%;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        nav{
+            display: flex;
+            padding: 2% 6%;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav img{
+            width: 150px;
+        }
+        .nav-links{
+            flex:1;
+            text-align: right;
+        }
+        .nav-links ul li{
+            list-style: none;
+            display: inline-block;
+            padding: 8px 12px;
+            position: relative;
+        }
+
+        .nav-links ul li a{
+            color: #fff;
+            text-decoration: none;
+            font-size: 17px;
+            font-family: "poppins";
+        }
+
+        .nav-links ul li::after{
+            content: "";
+            width: 0%;
+            height: 2px;
+            background: #f44336;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+
+        }
+
+        .nav-links ul li:hover::after{
+            width: 100%;
+        }
+
+        nav {
+    display: flex;
+    padding: 2% 6%;
+    align-items: center; /* Centrera vertikalt */
+}
+
+nav a {
+    display: flex; /* Lägg till denna rad */
+    align-items: center; /* Lägg till denna rad */
+    margin-left: 0; /* Ingen marginal till vänster */
 }
 
 .fa-building-columns {
     color: white;
-    padding: 10px;
-}
-
-.title {
-    font-family: 'Courier New', Courier, monospace; /* Du kan byta till en annan font här */
-    font-size: 30px; /* Justera storleken här */
-    color: white; /* Justera färgen här om det behövs */
-    vertical-align: middle; /* För att centrera texten vertikalt med ikonen */
-    margin-left: 10px; /* Avstånd mellan ikon och text */
-}
-
-.nav-links a {
-    font-family: 'Courier New', Courier, monospace;
-}
-
-nav a {
-    display: flex;
-    align-items: center; /* För att centrera ikon och text vertikalt */
+    padding: 0 10px 0 0; /* Justera padding för att separera ikonen från titeln */
 }
 
 
-a {
-    text-decoration: none; /* Ta bort understrykningen från alla länkar */
-    color: inherit; /* Behåll färgen som den är */
-}
-a:visited {
-    text-decoration: none; /* Ta bort understrykningen från besökta länkar */
-    color: inherit; /* Behåll färgen som den är */
-}
 
     </style>
+</head>
 <body>
     <section class="header">
         <nav>
             <a href="index.html">
-                <i class="fa-solid fa-building-columns fa-2x"></i>
+                <i class="fa-solid fa-building-columns fa-3x"></i>
                 <span class="title">Varberg University of Technology</span>
             </a>
             <div class="nav-links">
