@@ -214,3 +214,10 @@ h3{
     text-align: center;
     padding-top: 20px;
 }
+
+.campus-col{
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
