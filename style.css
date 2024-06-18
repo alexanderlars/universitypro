@@ -120,4 +120,14 @@ nav .fa{
         text-align: left;
         z-index: 2;
     }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
 }
