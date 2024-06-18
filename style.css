@@ -102,9 +102,17 @@ nav img{
     transition: 0.5s;
 }
 
-nav .fa{
+nav .fa-xmark{
+    color: #fff;
     display: none;
 }
+
+nav .fa-bars{
+    color: #fff;
+    display: none;
+}
+
+
 
 @media(max-width:700px){
     .text-box h1{
@@ -120,7 +128,14 @@ nav .fa{
         text-align: left;
         z-index: 2;
     }
-    nav .fa{
+    nav .fa-xmark{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    nav .fa-bars{
         display: block;
         color: #fff;
         margin: 10px;
