@@ -6,7 +6,7 @@
 .header {
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.3),rgba(4,9,30,0.3)), url("images/cool2.png");
+    background-image: linear-gradient(rgba(4,9,30,0.4),rgba(4,9,30,0.4)), url("images/cool2.png");
     background-position: center;
     background-size: cover;
     position: relative;
@@ -20,6 +20,7 @@ nav{
 }
 
 nav img{
+    margin-left: -10%;
     width: 350px;
 }
 .nav-links{
@@ -37,7 +38,8 @@ nav img{
     color: #fff;
     text-decoration: none;
     font-size: 17px;
-    font-family: "poppins";
+    font-family: "PT Serif Caption", serif;
+    
 }
 
 .nav-links ul li::after{
@@ -60,7 +62,7 @@ nav img{
     width: 90%;
     color: #fff;
     position: absolute;
-    top: 47%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     text-align: center;
@@ -68,13 +70,16 @@ nav img{
 
 .text-box h1{
     font-size: 55px;
-    font-family: "poppins";
+    font-weight: 600;
+    font-family: "PT Serif Caption", serif;
 }
 
 .text-box p{
     font-size: 18px;
     color: #fff;
     margin: 10px;
+    font-weight: 400;
+    font-family: "PT Serif Caption", serif;
 }
 
 .hero-btn{
@@ -87,6 +92,7 @@ nav img{
     background: transparent;
     position: relative;
     cursor: pointer;
+    font-family: "PT Serif Caption", serif;
 
 }
 
