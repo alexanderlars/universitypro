@@ -209,7 +209,7 @@ h3{
 }
 
 .campus{
-    width: 90%;
+    width: 80%;
     margin: auto;
     text-align: center;
     padding-top: 20px;
@@ -218,8 +218,20 @@ h3{
 .campus-col{
     border-radius: 10px;
     margin-bottom: 30px;
-    margin-left: 10px;
-    margin-right: 10px;
+    flex: 1 1 45%;
+    margin: 10px;
     position: relative;
     overflow: hidden;
 }
+
+.campus-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
