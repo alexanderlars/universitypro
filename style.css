@@ -209,7 +209,7 @@ h3{
 }
 
 .campus{
-    width: 80%;
+    width: 90%;
     margin: auto;
     text-align: center;
     padding-top: 20px;
@@ -218,6 +218,8 @@ h3{
 .campus-col{
     border-radius: 10px;
     margin-bottom: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
     position: relative;
     overflow: hidden;
 }
