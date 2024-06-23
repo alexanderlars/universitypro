@@ -361,12 +361,16 @@ h3{
 }
 
 .about-col{
-    flex-basis: 48%;
     padding: 30px 2px;
 }
 
 .about-col img{
-    width: 100%;
+    width: 80%;
+    float: right;
+    width: 600px;
+    height: 600px;
+    padding: 20px;
+
 }
 
 .about-col h1{
@@ -374,15 +378,27 @@ h3{
 }
 
 .about-col p{
-    padding: 15px 0 25px;
+    padding: 15px 0 5px;
 }
 
 .red-btn{
     border: 1px solid darkblue;
     background:transparent ;
     color: darkblue;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    
+    
 }
 
 .red-btn:hover{
     color: white;
+}
+
+.about-img{
+    width: 100px;
+    height: 100px;
+    float: right;
+
 }
