@@ -76,6 +76,12 @@ nav img{
     font-family: "PT Serif Caption", serif;
 }
 
+h2{
+    font-size: 40px;
+    font-weight: 600;
+    font-family: "PT Serif Caption", serif;
+    }
+
 .text-box p{
     font-size: 18px;
     color: #fff;

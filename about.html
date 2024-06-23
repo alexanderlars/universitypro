@@ -3,10 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Varberg University About</title>
+    <style>
+        .header {
+            min-height: 55vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(4,9,30,0.4),rgba(4,9,30,0.4)), url("images/backside.png");
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+    </style>
 </head>
 <body>
-    <h1>About</h1>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="courses.html">COURSES</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+    
+    <div class="text-box">
+        <h2>About Us</h2>
+        
+    </div>
+    </section>
+    
     
 </body>
 </html>
