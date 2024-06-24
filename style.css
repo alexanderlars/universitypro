@@ -381,9 +381,9 @@ h3{
 }
 
 .red-btn{
-    border: 1px solid darkblue;
+    border: 1px solid rgb(83, 83, 146);
     background:transparent ;
-    color: darkblue;
+    color: rgb(83, 83, 146);
     text-align: center;
     display: flex;
     justify-content: center;
@@ -407,7 +407,7 @@ h3{
 }
 
 .blog-right h3{
-    background-color: darkblue;
+    background-color: rgb(83, 83, 146);
     color: white;
     padding: 7px 0;
     font-size: 16px;
@@ -439,7 +439,7 @@ th, td {
     
 }
 th {
-    background-color: darkblue;
+    background-color: rgb(83, 83, 146);
     color: #fff;
     font-family: "PT Serif Caption", serif;
 }
@@ -491,7 +491,7 @@ th {
 }
 
 .blog-right h3{
-    background-color: darkblue;
+    background-color: rgb(83, 83, 146);
     color: #fff;
     padding: 7px 0;
     font-size: 16px;
@@ -571,21 +571,21 @@ th {
 }
 
 .contact-col div .fa-phone{
-   color: darkblue;
+   color: rgb(83, 83, 146);
    font-size: 28px;
    margin: 10px;
    margin-right: 30px;
 }
 
 .contact-col div .fa-home{
-    color: darkblue;
+    color: rgb(83, 83, 146);
     font-size: 28px;
     margin: 10px;
     margin-right: 30px;
  }
 
  .contact-col div .fa-envelope-o{
-    color: darkblue;
+    color: rgb(83, 83, 146)f;
     font-size: 28px;
     margin: 10px;
     margin-right: 30px;
