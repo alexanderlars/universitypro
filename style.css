@@ -600,3 +600,11 @@ th {
     margin-bottom: 5px;
     color: #3d3d3d;
  }
+
+ .contact-col input, .contact-col textarea{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #ccc;
+ }
