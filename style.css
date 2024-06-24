@@ -426,18 +426,37 @@ h3{
 }
 
 table {
-    width: 100%;
+    width: 90%;
     border-collapse: collapse;
     margin: 2px 0;
     font-size: 18px;
     text-align: left;
+    background-color: #f4f3ff8b;
+    margin-bottom: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 th, td {
-    padding: 12px;
+    padding: 20px;
     
 }
 th {
     background-color: darkblue;
     color: #fff;
-    font-family: "PT Serif Caption", ;
+    font-family: "PT Serif Caption", serif;
+}
+
+.undertitel{
+    margin-top: 0;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.undertitel p{
+    font-size: 15px;
+    margin: 10px;
+    font-weight: 400;
+    font-family: "PT Serif Caption", serif;
 }
