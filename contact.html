@@ -1,33 +1,74 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Varberg University Contact</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varberg University Courses</title>
+    <script src="https://kit.fontawesome.com/25a70e840f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .header {
+            min-height: 60vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(4,9,30,0.4),rgba(4,9,30,0.4)), url("images/backside.png");
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+        h1{
+            padding-bottom: 20px;
+            font-size: 45px;
+        }
+    </style>
 </head>
 <body>
     <section class="header">
-      <nav>
-          <a href="index.html"><img src="images/logo.png"></a>
-          <div class="nav-links" id="navLinks">
-              <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
-              <ul>
-                  <li><a href="index.html">HOME</a></li>
-                  <li><a href="about.html">ABOUT</a></li>
-                  <li><a href="courses.html">COURSES</a></li>
-                  <li><a href="blog.html">BLOG</a></li>
-                  <li><a href="contact.html">CONTACT</a></li>
-              </ul>
-          </div>
-          <i class="fa-solid fa-bars" onclick="showMenu()"></i>
-      </nav>
-  
-  <div class="text-box">
-      <h2>Contact</h2>
-      
-  </div>
-  </section>
+        <nav>
+            <a href="index.html"><img src="images/logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="courses.html">COURSES</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+    
+    <div class="text-box">
+        <h2>Contact</h2> 
+    </div>
+    </section>
 
+
+
+    <section class="footer">
+        <h4>Learn More About Us</h4>
+        <p>Don't miss out on the latest updates and events at Varberg University of Technology. Follow us on our social media channels to stay informed and engaged with our vibrant community. Join us on Facebook, Instagram, Linkedin, Youtube and Twitter for news, insights, and a glimpse into campus life.</p>
+        <div class="icons">
+            <i class="fa-brands fa-facebook fa-xl"></i>
+            <i class="fa-brands fa-x-twitter fa-xl"></i>
+            <i class="fa-brands fa-instagram fa-xl"></i>
+            <i class="fa-brands fa-linkedin fa-xl"></i>
+            <i class="fa-brands fa-youtube fa-xl"></i>
+    
+        </div>
+        <p>Made by Alexander Larsnäs <i class="fa fa-heart-o"></i> </p>
+    </section>
+
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right="0";
+        }
+        function hideMenu(){
+            navLinks.style.right="-250px"
+        }
+    </script>
+    
 </body>
 </html>
