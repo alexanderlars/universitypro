@@ -633,3 +633,23 @@ th {
     height: 450px;
     padding: 30px;
 }
+
+.footer .icons .fa-facebook:hover{
+    font-size: 30px;
+}
+
+.footer .icons .fa-youtube:hover{
+    font-size: 30px;
+}
+
+.footer .icons .fa-linkedin:hover{
+    font-size: 30px;
+}
+
+.footer .icons .fa-instagram:hover{
+    font-size: 30px;
+}
+
+.footer .icons .fa-x-twitter:hover{
+    font-size: 30px;
+}
