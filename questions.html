@@ -142,7 +142,7 @@
             <input type="text" id="answer8" placeholder="Write your answer here">
         </div>
 
-        <button id="submitBtn" onclick="checkAnswers()">Svara</button>
+        <button id="submitBtn" onclick="checkAnswers()">Answer</button>
         <button id="resetBtn" onclick="resetQuiz()" style="display: none;">Börja om</button>
         <div id="result"></div>
     </div>
@@ -197,7 +197,7 @@
                 document.getElementById(`answer${i}`).disabled = true;
             }
 
-            result.innerHTML = `Du fick ${correctCount} av 8 rätt!`;
+            result.innerHTML = `You got ${correctCount} out of 8!`;
             result.style.color = correctCount === 8 ? "green" : "red";
 
             submitBtn.disabled = true;
