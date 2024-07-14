@@ -7,6 +7,12 @@
     <script src="https://kit.fontawesome.com/25a70e840f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <style>
+        body {
+            font-family: "PT Serif Caption";
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
         .header {
             min-height: 60vh;
             width: 100%;
@@ -14,10 +20,60 @@
             background-position: center;
             background-size: cover;
             position: relative;
+        
         }
         h1{
             padding-bottom: 20px;
             font-size: 45px;
+        }
+        .quiz-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 700px;
+
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+        }
+        button {
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+        #submitBtn {
+            background-color: #4CAF50;
+        }
+        #submitBtn:hover {
+            background-color: #45a049;
+        }
+        #resetBtn {
+            background-color: #f44336;
+        }
+        #resetBtn:hover {
+            background-color: #d32f2f;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .quiz{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
         }
     </style>
 </head>
@@ -39,9 +95,33 @@
         </nav>
     
     <div class="text-box">
-        <h2>Quiz</h2>   
+        <h2>Quiz</h2>       
     </div>
     </section>
+<section class="quiz">
+    <div class="quiz-container">
+        <h2>Varberg University Quiz</h2>
+        
+        <div class="question">
+            <p>1. Vad är huvudstaden i Sverige?</p>
+            <input type="text" id="answer1" placeholder="Skriv ditt svar här">
+        </div>
+
+        <div class="question">
+            <p>2. Vilket år grundades Sverige?</p>
+            <input type="text" id="answer2" placeholder="Skriv ditt svar här">
+        </div>
+
+        <div class="question">
+            <p>3. Vad heter Sveriges största sjö?</p>
+            <input type="text" id="answer3" placeholder="Skriv ditt svar här">
+        </div>
+
+        <button id="submitBtn" onclick="checkAnswers()">Svara</button>
+        <button id="resetBtn" onclick="resetQuiz()" style="display: none;">Börja om</button>
+        <div id="result"></div>
+    </div>
+</section>
 
     <section class="footer">
         <h4>Learn More About Us</h4>
@@ -57,6 +137,7 @@
         <p>Made by Alexander Larsnäs <i class="fa fa-heart-o"></i> </p>
     </section>
 
+
     <script>
         var navLinks = document.getElementById("navLinks");
         function showMenu(){
@@ -64,6 +145,51 @@
         }
         function hideMenu(){
             navLinks.style.right="-250px"
+        }
+
+        const correctAnswers = {
+            1: "stockholm",
+            2: "1523",
+            3: "vänern"
+        };
+
+        function checkAnswers() {
+            let correctCount = 0;
+            const result = document.getElementById("result");
+            const submitBtn = document.getElementById("submitBtn");
+            const resetBtn = document.getElementById("resetBtn");
+
+            for (let i = 1; i <= 3; i++) {
+                const answer = document.getElementById(`answer${i}`).value.trim().toLowerCase();
+                if (answer === correctAnswers[i]) {
+                    correctCount++;
+                }
+                document.getElementById(`answer${i}`).disabled = true;
+            }
+
+            result.innerHTML = `Du fick ${correctCount} av 3 rätt!`;
+            result.style.color = correctCount === 3 ? "green" : "blue";
+
+            submitBtn.disabled = true;
+            submitBtn.style.backgroundColor = "#cccccc";
+            resetBtn.style.display = "block";
+        }
+
+        function resetQuiz() {
+            const result = document.getElementById("result");
+            const submitBtn = document.getElementById("submitBtn");
+            const resetBtn = document.getElementById("resetBtn");
+
+            for (let i = 1; i <= 3; i++) {
+                const input = document.getElementById(`answer${i}`);
+                input.value = "";
+                input.disabled = false;
+            }
+
+            result.innerHTML = "";
+            submitBtn.disabled = false;
+            submitBtn.style.backgroundColor = "#4CAF50";
+            resetBtn.style.display = "none";
         }
     </script>
 </body>
