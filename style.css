@@ -48,7 +48,7 @@ nav img{
     content: "";
     width: 0%;
     height: 2px;
-    background: rgb(1, 1, 57);
+    background: rgba(0, 0, 119, 0.777);
     display: block;
     margin: auto;
     transition: 0.5s;
