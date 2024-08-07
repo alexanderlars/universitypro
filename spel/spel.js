@@ -71,7 +71,7 @@ function visa_gissat(ordet, rätta_gissningar) {
 
 let ordlista = ["python", "hänga", "robot", "fysik", "yxa", "programmera", "lund", "lynchning", "kvantmekanik", "elektron", "gravitation", "relativitetsteori", "termodynamik", "kärnkraft", "elektromagnetism", "fusion", "kvantfältteori", "partikelaccelerator", "strålning", "schrödinger", "ljusår", "atomkärna", "kvark", "antimateria", "vidunder", "snilleblixt", "dyrbar", "gemen", "furste", "förgäves", "ypperlig", "otyg", "styggelse", "häpen", "ömklig", "obehaglig", "mesopotamien", "akropolis", "byzantium", "vasadynastin", "napoleonkrigen", "industriellarevolutionen", "kolonialimperier", "amerikanskainbördeskriget", "bolsjevikrevolutionen", "paleolitikum", "neolitikum", "hansaförbundet", "mayacivilisationen", "renässanskonst", "feudalsamhället", "reformationen", "kolonialkrig", "franskarevolutionen", "suezkrisen", "pyrrhusseger", "karybdis"];
 
-document.getElementById("ordet").textContent = "Tryck på start för att börja!"
+document.getElementById("ordet").textContent = "Tryck på starta för att börja!"
 
 function starta(){
     let ordet = välj_random_ord(ordlista);
