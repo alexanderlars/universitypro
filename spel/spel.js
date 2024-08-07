@@ -107,7 +107,7 @@ document.getElementById("Submitguess").onclick = function () {
         document.getElementById("antalgiss").textContent = "Du har " + antal_gissningar + " gissningar kvar";
     }
 
-    if(!lista_över_gissade.includes(guess)){
+    if(!lista_över_gissade.includes(guess) && !rätta_gissningar.includes(guess) ){
         lista_över_gissade.push(guess);}
 
     document.getElementById("gissade").textContent = lista_över_gissade.join(', ')
