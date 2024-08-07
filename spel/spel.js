@@ -12,7 +12,6 @@ function animateLetters() {
     });
 }
 
-// Lägg till konfetti-effekt vid vinst
 function showConfetti() {
     for (let i = 0; i < 100; i++) {
         createConfetti();
