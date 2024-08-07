@@ -66,9 +66,10 @@ body{
 
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto:wght@400;700&display=swap');
 
+
 :root {
-  --primary-color: #151939ce;
-  --secondary-color: #e2b8b856;
+  --primary-color: #070b2fce;
+  --secondary-color: #887de756;
   --accent-color: #7780ffbc;
   --background-color: #cfd8ffd6;
   --text-color: #070725;
@@ -129,7 +130,7 @@ h1 {
 
 .display:hover, .gissning:hover, div:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 8px rgba(112, 15, 15, 0.15);
+  box-shadow: 0 6px 8px rgba(5, 2, 2, 0.15);
 }
 
 #ordet {
@@ -137,6 +138,11 @@ h1 {
   letter-spacing: 5px;
 }
 
+label{
+    font-weight: 700;
+    color:#070725;
+    font-family: 'Fredoka One';
+}
 .giss {
   padding: 10px;
   font-size: 0.6em;
@@ -158,6 +164,8 @@ h1 {
   font-size: 0.7em;
   border-radius: 5px;
   cursor: pointer;
+  margin-left: 20px;
+  margin-right: 20px;
   transition: all 0.3s ease;
 }
 

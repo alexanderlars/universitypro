@@ -70,56 +70,65 @@ function visa_gissat(ordet, rätta_gissningar) {
 }
 
 let ordlista = ["python", "hänga", "robot", "fysik", "yxa", "programmera", "lund", "lynchning", "kvantmekanik", "elektron", "gravitation", "relativitetsteori", "termodynamik", "kärnkraft", "elektromagnetism", "fusion", "kvantfältteori", "partikelaccelerator", "strålning", "schrödinger", "ljusår", "atomkärna", "kvark", "antimateria", "vidunder", "snilleblixt", "dyrbar", "gemen", "furste", "förgäves", "ypperlig", "otyg", "styggelse", "häpen", "ömklig", "obehaglig", "mesopotamien", "akropolis", "byzantium", "vasadynastin", "napoleonkrigen", "industriellarevolutionen", "kolonialimperier", "amerikanskainbördeskriget", "bolsjevikrevolutionen", "paleolitikum", "neolitikum", "hansaförbundet", "mayacivilisationen", "renässanskonst", "feudalsamhället", "reformationen", "kolonialkrig", "franskarevolutionen", "suezkrisen", "pyrrhusseger", "karybdis"];
-let ordet = välj_random_ord(ordlista);
-let antal_gissningar = 10;
 
-console.log(ordet)
+document.getElementById("ordet").textContent = "Tryck på start för att börja!"
 
-let ord = "";
-for (let k of ordet) {
+function starta(){
+    let ordet = välj_random_ord(ordlista);
+    let antal_gissningar = 10;
+    let lista_över_gissade = [];
+    let rätta_gissningar = [];
+
+    console.log(ordet)
+
+    let ord = "";
+    for (let k of ordet) {
     ord += "_";
-}
-document.getElementById("antalgiss").textContent = "Du har " + antal_gissningar + " gissningar kvar";
-document.getElementById("ordet").textContent = ord;
-
-let lista_över_gissade = [];
-let rätta_gissningar = [];
-
-document.getElementById("Submitguess").onclick = function () {
-
-    let guess = document.getElementById("myguess").value.toLowerCase();
-
-    if (!ärGiltigBokstav(guess)) {
-        document.getElementById("respons").textContent = "Vänligen ange endast en BOKSTAV";
-        return;
     }
+    document.getElementById("antalgiss").textContent = "Du har " + antal_gissningar + " gissningar kvar";
+    document.getElementById("ordet").textContent = ord;
+    document.getElementById("respons").textContent = "Lycka till!"
+    document.getElementById("gissade").textContent = ""
+    document.getElementById("börja").textContent = "Börja om"
 
-    if (lista_över_gissade.includes(guess) || rätta_gissningar.includes(guess)) {
-        document.getElementById("respons").textContent = "Du har redan gissat på denna bokstav";
-    } else if (ordet.includes(guess)) {
-        document.getElementById("respons").textContent = "Bokstaven du gissade FANNS i ordet!";
-        let n = countLetterOccurrences(ordet, guess);
-        läggTillLista(guess, n, rätta_gissningar);
-        document.getElementById("ordet").textContent = visa_gissat(ordet, rätta_gissningar);
-    } else {
-        document.getElementById("respons").textContent = "Bokstaven du gissade fanns INTE i ordet";
-        antal_gissningar--;
-        document.getElementById("antalgiss").textContent = "Du har " + antal_gissningar + " gissningar kvar";
+
+
+    document.getElementById("Submitguess").onclick = function () {
+
+        let guess = document.getElementById("myguess").value.toLowerCase();
+    
+        if (!ärGiltigBokstav(guess)) {
+            document.getElementById("respons").textContent = "Vänligen ange endast en BOKSTAV";
+            return;
+        }
+    
+        if (lista_över_gissade.includes(guess) || rätta_gissningar.includes(guess)) {
+            document.getElementById("respons").textContent = "Du har redan gissat på denna bokstav";
+        } else if (ordet.includes(guess)) {
+            document.getElementById("respons").textContent = "Bokstaven du gissade FANNS i ordet!";
+            let n = countLetterOccurrences(ordet, guess);
+            läggTillLista(guess, n, rätta_gissningar);
+            document.getElementById("ordet").textContent = visa_gissat(ordet, rätta_gissningar);
+        } else {
+            document.getElementById("respons").textContent = "Bokstaven du gissade fanns INTE i ordet";
+            antal_gissningar--;
+            document.getElementById("antalgiss").textContent = "Du har " + antal_gissningar + " gissningar kvar";
+        }
+    
+        if(!lista_över_gissade.includes(guess)){
+            lista_över_gissade.push(guess);}
+    
+        document.getElementById("gissade").textContent = lista_över_gissade.join(', ')
+    
+        if (antal_gissningar <= 0) {
+            document.getElementById("respons").textContent = "Du har slut på gissningar! Ordet var: " + ordet;
+        } else if (visa_gissat(ordet, rätta_gissningar) === ordet) {
+            document.getElementById("respons").textContent = "Grattis du vann!! Ordet var: " + ordet.charAt(0).toUpperCase()+ordet.slice(1);
+            showConfetti()
+        }
+    
+        document.getElementById("myguess").value=""
+    
+    
     }
-
-    if(!lista_över_gissade.includes(guess) && !rätta_gissningar.includes(guess) ){
-        lista_över_gissade.push(guess);}
-
-    document.getElementById("gissade").textContent = lista_över_gissade.join(', ')
-
-    if (antal_gissningar <= 0) {
-        document.getElementById("respons").textContent = "Du har slut på gissningar! Ordet var: " + ordet;
-    } else if (visa_gissat(ordet, rätta_gissningar) === ordet) {
-        document.getElementById("respons").textContent = "Grattis du vann!! Ordet var: " + ordet.charAt(0).toUpperCase()+ordet.slice(1);
-        showConfetti()
-    }
-
-    document.getElementById("myguess").value=""
-
-
 }
